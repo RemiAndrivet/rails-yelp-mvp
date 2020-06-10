@@ -1,0 +1,11 @@
+  <div class="row">
+    <div class="col-6 offset-3">
+      <%= simple_form_for(@restaurant) do |t| %>
+          <%= t.input :name %>
+          <%= t.input :address %>
+          <%= t.input :phone_number %>
+          <%= t.input :category, collection: Restaurant::CATEGORY%>
+          <%= t.submit class: 'btn btn-primary w-100' %>
+      <% end %>
+    </div>
+  </div>

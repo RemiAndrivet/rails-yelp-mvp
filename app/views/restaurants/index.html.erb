@@ -1,0 +1,5 @@
+<ul><%@restaurants.each do |restaurant|%>
+  <li><%=restaurant.name%></li><%= link_to 'Show', restaurant_path(restaurant[:id]) %>
+  <%end%>
+</ul>
+<div class="btn btn-success"><%= link_to "Add restaurant", "/restaurants/new" %></div>
